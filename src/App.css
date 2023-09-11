@@ -1,38 +1,85 @@
-.App {
+/* Header Container */
+.App{
+text-align: center;
+}
+
+.header {
+  background-color: #333; /* You can change the background color */
+  color: #fff; /* Text color */
+  padding: 2px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header Title */
+.header-h1 {
+  font-size: 20px; /* You can adjust the font size */
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Add more styles as needed */
+
+/* Footer Container */
+.footer {
+  background-color: #333; /* You can change the background color */
+  color: #fff; /* Text color */
+  padding: 10px;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Product List Container */
+.product-list {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  width: 40%;
+}
+
+/* Add more styles as needed */
+/* Styling for the product item container */
+.product-item {
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.product-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Styling for the product header */
+.product-header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.product-header p {
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Styling for the product details */
+.product-details {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.product-details p {
+  margin: 5px 0;
+}
+
+/* Styling for the active product item */
+.product-item.active .product-header {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.product-item.active .product-details {
+  display: block;
 }

@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.css'; // Import your CSS for styling
+import ProductList from './components/ProductList';
+import { products } from './products';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
+  // Sample product data (you can fetch this from an API)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <Header />
+      <header>
+        <h3>Product Catalog</h3>
       </header>
+      <main>
+        <ProductList products={products} />
+      </main>
+      <Footer />
     </div>
   );
 }
